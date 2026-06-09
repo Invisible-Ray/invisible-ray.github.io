@@ -44,7 +44,7 @@
 
   function downloadResume() {
     var link = document.createElement("a");
-    link.href = "resume/cv.pdf";
+    link.href = "cv.pdf";
     link.download = "Devin_Gill_Resume.pdf";
     link.style.display = "none";
     document.body.appendChild(link);
