@@ -1,0 +1,133 @@
+:root {
+  --bg: #000000;
+  --fg: #ffebcd;
+  --dim: #b79f85;
+  --line: #2a2a2a;
+  --ok: #9cf2a2;
+  --warn: #ffd27a;
+  --err: #ff8c8c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.5 "JetBrains Mono", monospace;
+}
+
+.terminal {
+  max-width: 980px;
+  margin: 0;
+  padding: 24px 18px 12px;
+}
+
+.screen {
+  overflow-y: visible;
+  padding-bottom: 14px;
+}
+
+.logo {
+  margin: 0 0 16px;
+  color: var(--ok);
+  font-size: clamp(9px, 1.18vw, 14px);
+  line-height: 1.16;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+p {
+  margin: 0 0 8px;
+}
+
+.cmd {
+  color: var(--ok);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cmd-button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.output {
+  margin-top: 14px;
+}
+
+.entry {
+  margin: 0 0 8px;
+}
+
+.input-line {
+  color: var(--ok);
+}
+
+.response {
+  color: var(--fg);
+  margin-left: 2ch;
+  white-space: pre-wrap;
+}
+
+.response.dim {
+  color: var(--dim);
+}
+
+.response.warn {
+  color: var(--warn);
+}
+
+.response.error {
+  color: var(--err);
+}
+
+.response a {
+  color: var(--ok);
+}
+
+.prompt-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  margin-top: 2px;
+}
+
+.prompt-label {
+  color: var(--ok);
+  white-space: nowrap;
+}
+
+.prompt-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+}
+
+@media (max-width: 640px) {
+  .terminal {
+    padding: 14px 10px 8px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
